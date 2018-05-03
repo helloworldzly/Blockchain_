@@ -1,1 +1,8 @@
-# ethereum_analysis
+# Blockchain_
+
+#### I'm a PhD candidate in Tsinghua University, China. My research interests are Data Mining and Blockchain.
+
+#### Here I will post my paper reading notes and data analysis reports on Etheruem. Welcome to contact with me about Blockchain technology via emial-zengly2017@gmail.com
+
+### [PAPER READING]
+#### [Detecting Ponzi Schemes on Ethereum: Towards Healthier Blockchain Technology](https://github.com/helloworldzly/Blockchain_/blob/master/paper_www18_ponzi.md)
