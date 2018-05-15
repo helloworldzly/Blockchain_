@@ -12,4 +12,4 @@ The paper builds a XG-Boost based classification model to detect Ponzi contracts
 
 #### Framework
 
-![framework](/img/framwork.jpg)
+![framework](/img/framwork.jpg = 100*100)
