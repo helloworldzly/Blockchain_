@@ -4,7 +4,7 @@
 
 
 #### Abstract
-The paper builds a XG-Boost based classification model to detect Ponzi contracts in Ethereum using features from use accounts and operation codes.
+The paper builds a XG-Boost based classification model to detect Ponzi contracts in Ethereum using features from accounts and operation codes.
 
 #### Contribution
 * The previous study used **normalized Levenshtein distance**  to compute similarity between bytecodes, but it derectly uses bytecode features(opcode frequency).
@@ -22,7 +22,7 @@ The paper builds a XG-Boost based classification model to detect Ponzi contracts
 * Ponzi contract behavior: the operator generates returns for older investors through revenue paid by new investors. Participants' confidence in continuously paying back is the key factor in successful operation of Ponzi schemes.
 * The sending Ether transaction is called **normal tx** and the tiggered payment transaction is called **fired tx** 
 * Use a disassembly tool to get the operation code(like PUSH, ADD..) and calculate their frequency in a contract
-* Draw the Ether flow of a contract to extract its account feature
+* Draw the Ether flow of a contract to extract its account features
 
 #### Feature and Metric
 * Known Rate(Kr): the proportion of recievers who have invested before payment. High Kr means the the contract interact more with Acs knew.
