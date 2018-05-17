@@ -21,16 +21,16 @@ In this paper, we conduct the **first systematic study** on Ethereum by leveragi
 ### Graph Statistics
 ![distribution](/img/distribution.jpg)
 
-* 0.8% of EOAs do not transfer Ether.
-* More than 2/3(point(0,0.69)) contracts do not transfer Ether
-* About 81%(0.96 contracts, 0.77 EOAs) have no more than 5 tx
+* (a)0.8% of EOAs do not transfer Ether.
+* (a)More than 2/3(point(0,0.69)) contracts do not transfer Ether
+* (a)About 81%(0.96 contracts, 0.77 EOAs) have no more than 5 tx
 
-* 99%(point(0,0.99)) EOAs do not create contracts = only 1% developers(?)
-* 99.5% contracts are involved in 1 tx(point(0, 0.995))
+* (b)99%(point(0,0.99)) EOAs do not create contracts = only 1% developers(?)
+* (b)99.5% contracts are involved in 1 tx(point(0, 0.995))
 
-* 73% EOAs do not invoke contracts, 96% EOAs call contracts no more than 5 times
-* 81% contracts are not invoked
-* 60% contracts neither transfer money nor be invoked(waste resources) 
+* (c)73% EOAs do not invoke contracts, 96% EOAs call contracts no more than 5 times
+* (c)81% contracts are not invoked
+* (c)60% contracts neither transfer money nor be invoked(waste resources) 
 
 ### Graph Construction
 * **MFG**: a weighted directed graph, each edge with a weight, which is the total amount of transferred Ether.
@@ -53,7 +53,11 @@ In this paper, we conduct the **first systematic study** on Ethereum by leveragi
 ### MFG Analysis
 ![graph_metric.jpg](/img/graph_metric.jpg)
 ![10_nodes_MFG.jpg](/img/10_nodes_MFG.jpg)
-
+* **Degree/Indegree/Outdegree distribution:** the power law, a few large-degree nodes and many small-degree nodes.
+* **Clustering coefficient is large:** A-C, B-C then A-B
+* **Assortativity coefficient is negative:** a large-degree node prefer to trade with  small-degree node(exchange)
+* **Pearson coefficient:** deposit is uncommon in Ethereum
+* The largest **SCC** contains 86% nodes: **hub nodes.**
 
 
 
