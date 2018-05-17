@@ -21,6 +21,38 @@ In this paper, we conduct the **first systematic study** on Ethereum by leveragi
 ### Graph Statistics
 ![distribution](/img/distribution.jpg)
 
+* 0.8% of EOAs do not transfer Ether.
+* More than 2/3(point(0,0.69)) contracts do not transfer Ether
+* About 81%(0.96 contracts, 0.77 EOAs) have no more than 5 tx
+
+* 99%(point(0,0.99)) EOAs do not create contracts = only 1% developers(?)
+* 99.5% contracts are involved in 1 tx(point(0, 0.995))
+
+* 73% EOAs do not invoke contracts, 96% EOAs call contracts no more than 5 times
+* 81% contracts are not invoked
+* 60% contracts neither transfer money nor be invoked(waste resources) 
+
+### Graph Construction
+* **MFG**: a weighted directed graph, each edge with a weight, which is the total amount of transferred Ether.
+* **CCG**: a forest consisting of multiple trees. The root is an EOA, other nodes are contracts directly or indirectly created by the root.
+* **CIG**: a wighted directed graph, each edge with a weight, which is the total number of invocations.
+
+### Insights
+* **Insight 1:** Users prefer to transferring money on Ethereum instead of using smart contracts.
+* **Insight 2:** Smart contracts are not used widely.
+* **Insight 3:** Not all users frequently use Ethereum. 
+
+### Graph Analysis
+* **SCC/WCC:** strong/weak connected component. SCC: a sub-graph where there is a path from every node to every other node).
+* **Clustering coefficient:** a measure of the degree to which nodes in a graph tend to cluster together.
+* **Pearson coefficient:** evaluate the correlation between the indegree and out degree of nodes.(value in [-1, 1])
+* **Assortativity coefficient:** evaluate the preference for nodes to attach to others.
+* **PageRank algorithm:** evaluate node’s importance.
+* **Node identity: check all nodes in WCC to look for hints about their identity.**
+
+### MFG Analysis
+![graph_metric.jpg](/img/graph_metric.jpg)
+![10_nodes_MFG.jpg](/img/10_nodes_MFG.jpg)
 
 
 
