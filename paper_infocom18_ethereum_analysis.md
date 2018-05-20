@@ -53,14 +53,51 @@ In this paper, we conduct the **first systematic study** on Ethereum by leveragi
 ### MFG Analysis
 ![graph_metric.jpg](/img/graph_metric.jpg)
 ![10_nodes_MFG.jpg](/img/10_nodes_MFG.jpg)
-* **Degree/Indegree/Outdegree distribution:** the power law, a few large-degree nodes and many small-degree nodes.
+
+* **Degree/Indegree/Outdegree distribution:** the power law, a few large-degree nodes and many small-degree nodes
 * **Clustering coefficient is large:** A-C, B-C then A-B
 * **Assortativity coefficient is negative:** a large-degree node prefer to trade with  small-degree node(exchange)
 * **Pearson coefficient:** deposit is uncommon in Ethereum
 * The largest **SCC** contains 86% nodes: **hub nodes.**
 
+### CCG Analysis
+*Also see the graph of "METRICS OF THREE GRAPHS"*
 
+![10_nodes_CCG](/img/10_nodes_CCG.jpg)
 
+* **Degree distribution:** the power law(a few nodes create a large number of contracts)
+* **Clustering coefficient is zero**: each contract is created once
+* **The largest SCC size is 1:** no cycles in CCG
+* **Assortativity coefficient is negative:** contracts rarely creates contracts
+* **Insight 4: A small number of developers created lots of smart contracts.**
 
+### CIG Analysis
+*Also see the graph of "METRICS OF THREE GRAPHS"*
 
+![10_nodes_CIG](/img/10_nodes_CIG.jpg)
+
+* Degree/Indegree/Outdegree distribution: the power law
+* Clustering coefficient approches zero
+* Assortativity coefficient is negative
+* Pearson coefficient is 0.11(very weak correlation between in/out degree)
+* **Insight 5: Financial applications, such as exchange markets, dominate Ethereum because they are the most important nodes in three graphs.**
+
+### Attack Forensics
+![attack](/img/attack_forensics.jpg)
+
+* Finding accounts controlled by the attacker
+* Method: correlate CCG and CIG to obtain all nodes related with attackers(malicious smart contract, WCC)
+* Real case: BD37, Dos Attack, the attack controls 34,983 accounts
+
+### Anomaly Detection
+![anomaly](/img/anomaly_detection.jpg)
+
+* Discovering potential attacks through smart contracts
+* Abnormal account: it creates lots of contracts that are rarely used to transfer money or invoked
+
+### Conclusion
+* The first systematic investigation on Ethereum via graph analysis. 
+* Propose a new approach to collect all transactions data.
+* Obtain many new observations and insights to help better understanding the Ethereum ecosystem.
+* Propose new approaches to handle two security issues(attack forensics, anomaly detection) based on cross-graph analysis.
 
